@@ -1,0 +1,15 @@
+/.idea
+/node_modules
+/aot
+/dist
+app/**/*.js.map
+app/**/*.js
+app/**/*.css
+app/**/*.css.map
+build/**/*.js.map
+build/**/*.js
+server/**/*.js.map
+server/**/*.js
+*.ngfcatory
+*.ngsummary.json
+yarn.lock

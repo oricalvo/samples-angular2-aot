@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>Angular 2 Seed</title>
+
+    <base href="/">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      {{#if isProduction}}
+          <link rel="stylesheet" href="site.css">
+      {{else}}
+          <link rel="stylesheet" href="app/styles/site.css">
+      {{/if}}
+  </head>
+  <body>
+    <my-app></my-app>
+
+    <script>
+        var globals = {
+            isProduction: {{isProduction}},
+            modules: {}
+        };
+    </script>
+
+    {{#if isProduction}}
+        <script src="Reflect.js"></script>
+        <script src="zone.js"></script>
+        <script src="system.js"></script>
+        <script src="lib.bundle.js"></script>
+        <script src="app.bundle.js"></script>
+    {{else}}
+        <script src="node_modules/reflect-metadata/Reflect.js"></script>
+        <script src="node_modules/zone.js/dist/zone.js"></script>
+        <script src="node_modules/systemjs/dist/system.src.js"></script>
+        <script src="node_modules/nopack/client/loader.js"></script>
+    {{/if}}
+  </body>
+</html>
